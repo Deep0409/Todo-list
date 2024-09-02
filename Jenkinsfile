@@ -16,9 +16,9 @@ echo "Building"'''
 
     stage('Deploy') {
       steps {
-   sh 'mkdir -p /var/www/html'
-   sh 'cp -r ./* /var/www/html/'      
-   sh 'systemctl restart apache2'
+   sh 'sudo mkdir -p /var/www/html'
+   sh 'sudo cp -r ./* /var/www/html/'      
+   sh 'sudo systemctl restart apache2'
       }
     }
 
