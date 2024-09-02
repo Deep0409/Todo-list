@@ -12,7 +12,7 @@ pipeline {
         sh '''pwd
         echo "Building"'''
         sh ' sudo apt install apache2'
-        sh 'echo "setup complete"
+        sh 'echo "setup complete" '
       }
     }
 
