@@ -16,10 +16,9 @@ echo "Building"'''
 
     stage('Deploy') {
       steps {
-        sh ''' sudo cp -r ./*.html /var/www/html/
-        sudo cp -r ./*.js /var/www/html/
-        sudo cp -r ./*.css /var/www/html/
-systemctl restart apache2'''
+   sh 'mkdir -p /var/www/html'
+   sh 'cp -r ./* /var/www/html/'      
+   sh 'systemctl restart apache2'
       }
     }
 
