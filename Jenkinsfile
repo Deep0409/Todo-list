@@ -16,7 +16,9 @@ echo "Building"'''
 
     stage('Deploy') {
       steps {
-        sh '''cp -r ./dist/* /var/www/html/
+        sh '''cp -r ./*.html /var/www/html/
+        cp -r ./*.js /var/www/html/
+        cp -r ./*.css /var/www/html/
 systemctl restart apache2'''
       }
     }
