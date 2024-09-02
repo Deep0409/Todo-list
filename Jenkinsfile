@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''pwd
+        sh '''whoami
         echo "Building"'''
         sh ' sudo apt install apache2'
         sh 'echo "setup complete" '
